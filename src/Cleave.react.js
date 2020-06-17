@@ -253,7 +253,7 @@ var cleaveReactClass = CreateReactClass({
     onFocus: function (event) {
         var owner = this, pps = owner.properties;
 
-        event.target.rawValue = owner.getRawValue();
+        event.target.cleaveRawValue = owner.getRawValue();
         event.target.value = pps.result;
 
         owner.registeredEvents.onFocus(event);
@@ -264,7 +264,7 @@ var cleaveReactClass = CreateReactClass({
     onBlur: function (event) {
         var owner = this, pps = owner.properties;
 
-        event.target.rawValue = owner.getRawValue();
+        event.target.cleaveRawValue = owner.getRawValue();
         event.target.value = pps.result;
 
         owner.registeredEvents.onBlur(event);
@@ -276,7 +276,7 @@ var cleaveReactClass = CreateReactClass({
 
         owner.onInput(event.target.value);
 
-        event.target.rawValue = owner.getRawValue();
+        event.target.cleaveRawValue = owner.getRawValue();
         event.target.value = pps.result;
 
         owner.registeredEvents.onChange(event);
